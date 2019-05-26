@@ -9,6 +9,11 @@ namespace PostcodeIO.API
 {
     public class PostcodeAPIFetcher
     {
+        /// <summary>
+        /// Get the information about a given postcode in class form.
+        /// </summary>
+        /// <param name="postcode">A UK valid postcode.</param>
+        /// <returns>A PostcodeResult object.</returns>
         public static PostcodeResult GetPostcodeInfo(string postcode)
         {
             string contents = GetRawResponse(postcode);
@@ -26,6 +31,11 @@ namespace PostcodeIO.API
             return postcodeInfo.result;
         }
 
+        /// <summary>
+        /// Get the raw JSON response from the API for a given postcode.
+        /// </summary>
+        /// <param name="postcode">The postcode to fetch.</param>
+        /// <returns>Raw JSON string.</returns>
         public static string GetRawResponse(string postcode)
         {
             //Replace any spaces in the postcode with "%20" for URL encoding.
