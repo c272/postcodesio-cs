@@ -8,7 +8,7 @@ This is a basic wrapper for the [postcodes.io API,](http://postcodes.io) which c
 ## Getting Started
 First, clone the repo/download the `.cs` files that aren't `Program.cs`, and add them to your project by right clicking your project's name in the solution browser, then going to `Add -> Existing Item` and finding the file inside your project folder.
 
-When that's done, where you want to use the wrapper, add `using PostcodeIO.API;` at the top of the file.
+When that's done, where you want to use the wrapper, add `using PostcodeIO.API;` at the top of the file. This project also depends on `Newtonsoft.JSON`, which you can install via. Nuget.
 
 ## Getting Postcode Information
 To get information for an individual postcode, you can do this:
