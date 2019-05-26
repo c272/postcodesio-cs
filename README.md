@@ -23,5 +23,11 @@ Console.WriteLine("This postcode is in region:");
 Console.WriteLine(pcinfo.region);
 ```
 
+## Getting Raw Responses
+To get a raw response for an individual postcode, you can do this:
+```
+string contents = PostcodeAPIFetcher.GetRawResponse("FK6 6BL");
+```
+
 ## Documentation?
 This wrapper has the same structure as the JS version, so you can just go to [the official docs,](http://postcodes.io/docs) or you can go inside the `PostcodeInfo.cs` file to see commented docs.
