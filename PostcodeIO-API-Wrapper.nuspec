@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>PostcodesIO</id>
+    <version>$version$</version>
+    <title>$title$</title>
+    <authors>$author$</authors>
+    <owners>$author$</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <license type="expression">MIT</license>
+    <projectUrl>https://github.com/c272/postcodesio-cs</projectUrl>
+    <description>$description$</description>
+    <releaseNotes>Initial release, just a simple wrapper with JSON properties.</releaseNotes>
+    <copyright>Copyright 2020 C272.</copyright>
+    <tags>geotag geocoding postcodes postcode api postcodesio</tags>
+  </metadata>
+</package>

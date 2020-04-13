@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PostcodeIO-API-Wrapper")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Postcodes.io")]
+[assembly: AssemblyDescription("A simple JSON API wrapper for postcodes.io.")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PostcodeIO-API-Wrapper")]
-[assembly: AssemblyCopyright("Copyright ©  2019")]
+[assembly: AssemblyCompany("C272")]
+[assembly: AssemblyProduct("Postcodes.io")]
+[assembly: AssemblyCopyright("Copyright © C272 2019")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
