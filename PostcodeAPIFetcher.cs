@@ -22,13 +22,13 @@ namespace PostcodeIO.API
             var postcodeInfo = JsonConvert.DeserializeObject<PostcodeInfo>(contents);
 
             //Checking for errors.
-            if (postcodeInfo.status != 200)
+            if (postcodeInfo.Status != 200)
             {
-                throw new Exception(postcodeInfo.error);
+                throw new Exception(postcodeInfo.Error);
             }
 
             //Returning.
-            return postcodeInfo.result;
+            return postcodeInfo.Result;
         }
 
         /// <summary>

@@ -1,60 +1,112 @@
-﻿namespace PostcodeIO.API
+﻿using System;
+using Newtonsoft.Json;
+
+namespace PostcodeIO.API
 {
     //The full postcode info for a requested postcode.
     public class PostcodeInfo
     {
         //The HTTP status response from Postcodes.IO.
-        public int status;
+        [JsonProperty("status")]
+        public int Status;
 
         //If an error is returned, it is held here.
-        public string error;
+        [JsonProperty("error")]
+        public string Error;
 
         //The actual result of the API call.
-        public PostcodeResult result;
+        [JsonProperty("result")]
+        public PostcodeResult Result;
     }
 
     public class PostcodeResult
     {
         //The returned postcode.
-        public string postcode;
+        [JsonProperty("postcode")]
+        public string Postcode;
 
         //The quality of the postcode.
-        public int quality;
+        [JsonProperty("quality")]
+        public int Quality;
 
         //Eastings, northings.
-        public int eastings, northings;
+        [JsonProperty("eastings")]
+        public int Eastings;
+        [JsonProperty("northings")]
+        public int Northings;
 
         //Country the postcode is in, region.
-        public string country;
-        public string region;
+        [JsonProperty("country")]
+        public string Country;
+        [JsonProperty("region")]
+        public string Region;
 
         //The NHS domain of the postcode, primary care trust.
-        public string nhs_ha;
-        public string primary_care_trust;
+        [JsonProperty("nhs_ha")]
+        public string NHSDomain;
+        [JsonProperty("primary_care_trust")]
+        public string PrimaryCareTrust;
 
         //Longitude, latitude.
-        public double longitude;
-        public double latitude;
+        [JsonProperty("longitude")]
+        public double Longitude;
+        [JsonProperty("latitude")]
+        public double Latitude;
 
         //The european electoral region of the postcode.
-        public string european_electoral_region;
+        [JsonProperty("european_electoral_region")]
+        public string EuropeanElectoralRegion;
 
         //LSOA, MSOA
         public string LSOA, MSOA;
 
         //Postcode incode/outcode (region and subregion).
-        public string incode, outcode;
+        [JsonProperty("incode")]
+        public string Incode;
+        [JsonProperty("outcode")]
+        public string Outcode;
 
         //Parliamentary/council stuff.
-        public string parliamentary_constituency, admin_district, parish, admin_ward, admin_county, ced, ccg, nuts;
+        [JsonProperty("parliamentary_constituency")]
+        public string ParliamentaryConstituency;
+        [JsonProperty("admin_district")]
+        public string AdminDistrict;
+        [JsonProperty("parish")]
+        public string Parish;
+        [JsonProperty("admin_ward")]
+        public string AdminWard;
+        [JsonProperty("admin_county")]
+        public string AdminCounty;
+        [JsonProperty("ced")]
+        public string CED;
+        [JsonProperty("ccg")]
+        public string CCG;
+        [JsonProperty("nuts")]
+        public string NUTS;
 
         //Codes for this postcode.
-        PostcodeCodes codes;
+        [JsonProperty("codes")]
+        PostcodeCodes Codes;
     }
 
     //The set of assigned codes for this postcode.
     public class PostcodeCodes
     {
-        public string admin_district, admin_county, admin_ward, parish, parliamentary_constituency, ccg, ced, nuts;
+        [JsonProperty("parliamentary_constituency")]
+        public string ParliamentaryConstituency;
+        [JsonProperty("admin_district")]
+        public string AdminDistrict;
+        [JsonProperty("parish")]
+        public string Parish;
+        [JsonProperty("admin_ward")]
+        public string AdminWard;
+        [JsonProperty("admin_county")]
+        public string AdminCounty;
+        [JsonProperty("ced")]
+        public string CED;
+        [JsonProperty("ccg")]
+        public string CCG;
+        [JsonProperty("nuts")]
+        public string NUTS;
     }
 }
